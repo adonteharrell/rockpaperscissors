@@ -1,0 +1,80 @@
+import random
+import time
+
+def rock():
+  computer = {
+    1 : "rock",
+    2 : "paper",
+    3 : "scissors"}
+  num = random.randint(1, 3)
+  compchoice = computer[num]
+  answer = input("Enter rock, paper, or scissors: ")
+  if answer == "rock" and compchoice == "paper":
+    print("You entered Rock")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You lose!")
+    rock()
+  elif answer == "paper" and compchoice == "rock":
+    print("You entered Paper")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You win!")
+    rock()
+  elif answer == "scissors" and compchoice == "paper":
+    print("You entered scissors'")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You win!")
+    rock()
+  elif answer == "paper" and compchoice == "scissors":
+    print("You entered paper")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You lose!")
+    rock()
+  elif answer == "rock" and compchoice == "scissors":
+    print("You entered rock")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You win!")
+    rock()
+  elif answer == "scissors" and compchoice == "rock":
+    print("You entered scissors")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("You lose!")
+    rock()
+  elif answer == "scissors" and compchoice == "scissors":
+    print("You entered scissors")
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("It's a tie!")
+    rock()
+  elif answer == "rock" and compchoice == "rock":
+    print("You entered rock")    
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("It's a tie!")
+    rock()
+  elif answer == "paper" and compchoice == "paper":
+    print("You entered paper")    
+    print("Waiting for computers choice...")
+    time.sleep(3)
+    print("Computer chose " + compchoice)
+    print("It's a tie!")
+    rock()
+  else:
+    print("Enter a valid choice")
+    rock()
+  
+  
+rock()
